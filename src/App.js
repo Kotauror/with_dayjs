@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import dayjs from "dayjs"
 
 function App() {
   return (
@@ -16,10 +17,15 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
+          {formatDate("2021-05-27T12:39:41+00:00")}
         </a>
       </header>
     </div>
   );
+}
+
+export function formatDate(date) {
+  return dayjs(date).format("YYYY-MM-DD HH:mm:ss")
 }
 
 export default App;
